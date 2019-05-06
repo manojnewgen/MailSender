@@ -33,9 +33,26 @@ namespace ConsoleApp1
             client.Host = "smtp.gmail.com";
             client.EnableSsl = true;
             client.Credentials = new NetworkCredential("kumar.manoj@thinksys.com", "mitom@9058");
-            mail.Subject = "this is a test email.";
+            mail.Subject = "test email with digital signature";
+
             mail.Body = content;
             mail.IsBodyHtml = true;
+            //SmtpServer oServer = new SmtpServer("smtp.emailarchitect.net");
+
+            //// User and password for ESMTP authentication, if your server doesn't require
+            //// User authentication, please remove the following codes.
+            //oServer.User = "test@emailarchitect.net";
+            //oServer.Password = "testpassword";
+            //try
+            //{
+            //    // Find certificate by email adddress in My Personal Store.
+            //    // Once the certificate is loaded to From, the email content
+            //    // will be signed automatically
+            //    mail.From.Certificate.FindSubject(mail.From.Address,
+            //        Certificate.CertificateStoreLocation.CERT_SYSTEM_STORE_CURRENT_USER,
+            //        "My");
+            //}
+            mail.Headers.Add("multipart/alternative", "text/x-amp-html");
             client.Send(mail);
             Console.ReadKey();
         }

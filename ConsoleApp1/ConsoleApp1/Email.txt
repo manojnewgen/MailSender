@@ -5,25 +5,26 @@
   <script async src="https://cdn.ampproject.org/v0.js"></script>
   <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
   <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
- 
+
+
   <style amp4email-boilerplate>body{visibility:hidden}</style>
   <style amp-custom>
     h1 {
-    	font-family: arial;
-      	margin: 10px;
+        font-family: arial;
+        margin: 10px;
     }
     .center {
-		text-align: center;
+                text-align: center;
     }
     .carousel-preview {
       margin-top: 10px;
-    } 
+    }
   </style>
 </head>
 <body>
-	<amp-state id="myState">
+        <amp-state id="myState">
     <script type="application/json">
-      {"cats": 
+      {"cats":
          [
            {
             "name": "Aakash",
